@@ -1,5 +1,18 @@
 package orionclient
 
+type Version struct {
+	Orion	struct {
+		Version	string `json:"version"`
+		Uptime	string `json:"uptime"`
+		GitHash	string `json:"git_hash"`
+		CompileTime	string `json:"compile_time"`
+		CompiledBy	string `json:"compiled_by"`
+		CompiledIn	string `json:"compiled_in"`
+		ReleaseDate	string `json:"release_date"`
+		Doc	string `json:"doc"`
+	} `json:"orion"`
+}
+
 type Subscription struct {
 	Id string `json:"id,omitempty"`
 	Description string `json:"description"`

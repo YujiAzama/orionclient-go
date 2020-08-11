@@ -18,6 +18,7 @@ FIWARE Orion Client provides:
 - Get Orion Subscriptions
 - Retrieve Orion Subscriptions
 - Delete Orion Subscription
+- Get orion version infomation.
 - Using Subscription as an object in Go
 
 ## Installing
