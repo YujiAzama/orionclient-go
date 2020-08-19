@@ -14,12 +14,12 @@ This is a client library for calling FIWARE Orion API using Go.
 
 FIWARE Orion Client provides:
 
-- Create Orion Subscription
-- Get Orion Subscriptions
-- Retrieve Orion Subscriptions
-- Delete Orion Subscription
+- Create Orion Subscription and Registration
+- Get Orion Subscriptions and Registrations
+- Retrieve Orion Subscriptions and Registrations
+- Delete Orion Subscription and Registration
 - Get orion version infomation.
-- Using Subscription as an object in Go
+- Using Subscription and Registration as an object in Go
 
 ## Installing
 

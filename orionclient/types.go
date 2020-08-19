@@ -35,3 +35,23 @@ type Subscription struct {
 	Expires    string `json:"expires,omitempty"`
 	Throttling int       `json:"throttling,omitempty"`
 }
+
+type Registration struct {
+	Id string `json:"id, omitempty"`
+	DataProvided struct {
+		Entities []struct {
+			ID string `json:"id,omitempty"`
+			IdPattern string `"idPattern,omitempty"`
+			Type string `json:"type"`
+		} `json:"entities"`
+		Attrs []string `json:"attrs"`
+	} `json:"dataProvided"`
+	Provider struct {
+		HTTP struct {
+			URL string `json:"url"`
+		} `json:"http"`
+		LegacyForwarding        bool   `json:"legacyForwarding,omitempty"`
+		SupportedForwardingMode string `json:"supportedForwardingMode,omitempty"`
+	} `json:"provider"`
+	Status string `json:"status,omitempty"`
+}
