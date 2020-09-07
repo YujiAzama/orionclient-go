@@ -24,6 +24,9 @@ type Subscription struct {
 		} `json:"entities"`
 		Condition *struct {
 			Attrs []string `json:"attrs,omitempty"`
+			Expression *struct {
+				Q string `json:"q,omitempty"`
+			} `json:"expression,omitempty"`
 		} `json:"condition,omitempty"`
 	} `json:"subject"`
 	Notification struct {
@@ -31,9 +34,18 @@ type Subscription struct {
 			URL string `json:"url"`
 		} `json:"http"`
 		Attrs []string `json:"attrs,omitempty"`
+		AttrsFormat string `json:"attrsFormat,omitempty"`
+		LastFailure string `json:"lastFailure,omitempty"`
+		LastFailureReason string `json:"lastFailureReason,omitempty"`
+		LastNotification string `json:"lastNotification,omitempty"`
+		LastSuccess string `json:"lastSuccess,omitempty"`
+		LastSuccessCode int `json:"lastSuccessCode,omitempty"`
+		OnlyChangedAttrs bool `json:"onlyChangedAttrs,omitempty"`
+		TimesSent int `json:"timesSent,omitempty"`
 	} `json:"notification"`
 	Expires    string `json:"expires,omitempty"`
 	Throttling int       `json:"throttling,omitempty"`
+	Status string `json:"status,omitempty"`
 }
 
 type Registration struct {
